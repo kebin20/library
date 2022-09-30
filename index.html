@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>Welcome to your Library</h1>
+        <img src="https://img.icons8.com/color/48/000000/story-book.png" />
+        <a href="#">Login</a>
+    </nav>
+    <main>
+        <button class="add-book-button"><img src="https://img.icons8.com/nolan/64/plus.png" /></button>
+
+        <div class="book-container">
+        </div>
+
+
+        <div id="book-form" class="hidden book-modal">
+            <label for="bookName">Name:</label>
+            <input type="text" name="bookName" id="bookName">
+            <label for="author">Author:</label>
+            <input type="text" name="author" id="author">
+            <label for="pages">Pages:</label>
+            <input type="number" name="pages" id="pages">
+            <label for="haveRead">Have read? </label>
+            <input type="checkbox" name="haveRead" id="haveRead">
+            <div class="button-row">
+                <button class="save-book-button">Save</button>
+                <button class="clear-button">Clear</button>
+            </div>
+
+
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>

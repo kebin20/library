@@ -1,0 +1,73 @@
+body {
+    background-color: #c7f9cc;
+  }
+  
+  h1,a {
+    text-decoration: none;
+    margin: 1em
+  }
+  
+  main {
+    display:flex;
+  }
+  
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffc300;
+    box-shadow: 6px 4px 4px grey;
+    border-radius: 4px;
+  }
+  
+  nav>img {
+    margin-right: 10em;
+  }
+  
+  .add-book-button,.book {
+    margin: 2em;
+    height: 220px;
+    width: 150px;
+    border-radius: 20px;
+    border: #6930c3;
+    background-image: linear-gradient(180deg, #b298dc, #cdb4db);
+    box-shadow:7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  }
+  
+  button:active {
+     box-shadow:7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+     transform: translateY(4px);
+  }
+  
+  .book {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1em;
+  }
+  
+  .book-modal{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 220px;
+    border: 2px solid #6f2dbd;
+    padding: 1em;
+    border-radius: 20px;
+    background: #cdb4db;
+    margin-top: 1em;
+  }
+  
+  .button-row {
+    display:flex;
+    justify-content: space-around;
+    margin-top: 2em;
+  }
+  .visible {
+    display: block
+  }
+  
+  .hidden {
+    display: none
+  }
