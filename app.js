@@ -24,23 +24,24 @@ function renderAddBookScreen() {
   bookModal.classList.add("visible");
 }
 
-//Render newly inputted books onto screen
 saveBookButton.addEventListener("click", () => {
-  newBook.showBookDataHtml();
   addBookData();
   bookScreenOn = false;
   bookModal.classList.remove("visible");
   bookModal.classList.add("hidden");
+  bookData[bookData.length - 1].showBookDataHtml(bookData);
 });
 
 //Push new inputed books into bookData array
 function addBookData() {
-  bookData.push({
-    name: bookName.value,
-    author: author.value,
-    pages: pages.value,
-    read: haveRead.value,
-  });
+  bookData.push(
+    new Book({
+      name: bookName.value,
+      author: author.value,
+      pages: pages.value,
+      read: haveRead.value,
+    })
+  );
   console.log(bookData);
 }
 
@@ -55,35 +56,17 @@ class Book {
 
   showBookDataHtml(data) {
     const { name, author, pages, read } = this;
-    return (bookContainer.innerHTML = `
-       <div class="book" id="showBook">
-       <label for="bookName">Name: ${name}</label>
-       <label for="author">Author: ${author}</label>
-       <label for="pages">Pages: ${pages}</label>
-       <label for="haveRead">Have read?: ${read}</label>
-       </div>
-       `);
+    for (let book of bookData) {
+      return (bookContainer.innerHTML += `
+         <div class="book" id="showBook">
+         <label for="bookName">Name: ${name}</label>
+         <label for="author">Author: ${author}</label>
+         <label for="pages">Pages: ${pages}</label>
+         <label for="haveRead">Have read?: ${read}</label>
+         </div>
+         `);
+    }
   }
 }
 
 const newBook = new Book([bookData]);
-
-// const bookForm = document.getElementById('book-form')
-
-// bookForm.addEventListener('click', function(e){
-//     e.preventDefault()
-
-//     const bookFormData = new FormData(bookForm)
-//     const bookName = bookFormData.get('bookName')
-//     const author = bookFormData.get('author')
-//     const pages = bookFormData.get('pages')
-//     const haveRead = bookFormData.get('haveRead')
-//     bookContainer.innerHTML = `
-//        <div class="book" id="showBook">
-//        <label for="bookName">Name:${name}</label>
-//        <label for="author">Author:${author}</label>
-//        <label for="pages">Pages:${pages}</label>
-//        <label for="haveRead">Have read?: ${read}</label>
-//        </div>
-//        `
-// }

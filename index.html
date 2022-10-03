@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -23,6 +24,7 @@
 
 
         <div id="book-form" class="hidden book-modal">
+
             <label for="bookName">Name:</label>
             <input type="text" name="bookName" id="bookName">
             <label for="author">Author:</label>
@@ -31,14 +33,17 @@
             <input type="number" name="pages" id="pages">
             <label for="haveRead">Have read? </label>
             <input type="checkbox" name="haveRead" id="haveRead">
+
             <div class="button-row">
                 <button class="save-book-button">Save</button>
                 <button class="clear-button">Clear</button>
             </div>
 
+        </div>
 
     </main>
-    <script src="app.js"></script>
+
+    <script src="app.js" type="module"></script>
 </body>
 
 </html>
