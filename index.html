@@ -6,44 +6,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <nav class="navbar">
         <h1>Welcome to your Library</h1>
-        <img src="https://img.icons8.com/color/48/000000/story-book.png" />
+        <img src="https://img.icons8.com/color/48/000000/story-book.png" alt="Picture of a book in navbar">
         <a href="#">Login</a>
     </nav>
     <main>
-        <button class="add-book-button"><img src="https://img.icons8.com/nolan/64/plus.png" /></button>
+        <button class="add-book-button"><img src="https://img.icons8.com/nolan/64/plus.png" alt="add button"></button>
 
         <div class="book-container">
         </div>
 
+        <div class="overlay">
+            <div class="hidden book-modal">
+                <div class="close-modal-btn-container">
+                    <button class="modal-close-btn" id="modal-close-btn">X</button>
+                </div>
+                <label for="bookName">Name:</label>
+                <input type="text" name="bookName" id="bookName">
+                <label for="author">Author:</label>
+                <input type="text" name="author" id="author">
+                <label for="pages">Pages:</label>
+                <input type="number" name="pages" id="pages">
+                <label for="haveRead">Have read? </label>
+                <input type="checkbox" name="haveRead" id="haveRead">
 
-        <div id="book-form" class="hidden book-modal">
-
-            <label for="bookName">Name:</label>
-            <input type="text" name="bookName" id="bookName">
-            <label for="author">Author:</label>
-            <input type="text" name="author" id="author">
-            <label for="pages">Pages:</label>
-            <input type="number" name="pages" id="pages">
-            <label for="haveRead">Have read? </label>
-            <input type="checkbox" name="haveRead" id="haveRead">
-
-            <div class="button-row">
-                <button class="save-book-button">Save</button>
-                <button class="clear-button">Clear</button>
+                <div class="button-row">
+                    <button class="save-book-button">Save</button>
+                    <button class="clear-button">Clear</button>
+                </div>
             </div>
 
         </div>
 
     </main>
-
-    <script src="app.js" type="module"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
+
+<!-- THINGS TO DO:
+- Add a button on each recorded modal to remove itself
+- Make it a requirement to fill in fields 
+- If there is nothing filled in, let the button not do anything
+-->

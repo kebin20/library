@@ -1,15 +1,23 @@
-body {
+body,button {
   background-color: #c7f9cc;
+  font-family: 'Raleway', sans-serif;
+}
+
+input {
+  border-radius: 5px;
+  padding:0.3em;
+  margin: 0.3em;
 }
 
 h1,a {
   text-decoration: none;
-  margin: 1em
+  margin: 1em;
+  font-family: 'Righteous', cursive;
 }
 
 main {
-  display:flex;
-  justify-content: space-evenly;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar {
@@ -54,28 +62,66 @@ button:active {
   max-width: 90%;
 }
 
-#book-form{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+
+
+/* modal */
+
+.overlay {
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(128,128,128,0.5); 
+  display: none;
+}
+
+.book-modal{
+  position:absolute;
+  align-items: center;
   max-width: 90%;
   border: 2px solid #6f2dbd;
   padding: 1em;
   border-radius: 20px;
   background: linear-gradient(180deg, #b298dc, #cdb4db);;
   margin-top: 1em;
-  margin-right: 35em;
 }
 
 .button-row {
   display:flex;
   justify-content: space-around;
-  margin-top: 2em;
+  margin-top: 1em;
 }
+
+.button-row>button {
+  margin:0.5em;
+}
+
 .visible {
-  display: block
+  display: flex;
+  flex-direction: column;
 }
 
 .hidden {
   display: none
+}
+
+/* modal close button */
+.close-modal-btn-container{
+    margin-left: 10em;
+}
+
+.modal-close-btn {
+  font-size: 25px;
+  font-weight: bold;
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: whitesmoke;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:active{
+    color: red;
+    cursor: pointer;
 }
